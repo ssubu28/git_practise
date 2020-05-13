@@ -9,16 +9,18 @@ Note: If the number is a multiple of both 3 and 5, only count it once.
 """
 
 def solution(number):
-  total_sum = 0
+    """
+    total_sum = 0
   
-  for i in range(1, number):
-      if (i % 3 == 0 and i % 5 != 0) or (i % 3 != 0 and i % 5 == 0):
-          total_sum += i
-      elif i % 3 == 0 and i % 5 == 0:
-          total_sum += i
-      elif i % 3 != 0 and i % 5 != 0:
-          pass
-  print(total_sum)
+    for i in range(1, number):
+        if (i % 3 == 0 or i % 5 == 0):
+            total_sum += i
+    print(total_sum)
+    """
+
+
+
+    print(sum(i for i in range(1, number) if (i % 3 == 0) or (i % 5 == 0)))
 
 
 number = int(input("Please enter a number: "))
